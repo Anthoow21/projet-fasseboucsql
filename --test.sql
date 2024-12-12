@@ -11,10 +11,7 @@ SELECT CONCAT (préfixeLoginMembre,'%')
 --Permet de compter le nombre d'ami d'une personne : 
 -- LoginUtilisateur est le profil au quel on veut faire la recherche.
 --SELECT COUNT(LoginUtilisateur) WHERE
-(	(	(SELECT * FROM Utilisateur)R1
-	INNER JOIN
-		(SELECT * FROM LIER)R2
-	ON R1.LoginUtilisateur = R2.LoginUtilisateur)
+(	(	SELECT LoginUtilisateur_1 FROM LIER WHERE Lier.LoginUtilisateur = 
 UNION
 	(	(SELECT * FROM utilisateur)R3
 	INNER JOIN
